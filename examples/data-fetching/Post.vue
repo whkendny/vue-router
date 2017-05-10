@@ -39,6 +39,7 @@ export default {
       this.error = this.post = null
       this.loading = true
       getPost(this.$route.params.id, (err, post) => {
+        console.log(post)
         this.loading = false
         if (err) {
           this.error = err.toString()

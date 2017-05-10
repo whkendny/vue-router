@@ -15,6 +15,7 @@ export function getPost (id, cb) {
   // fake an API request
   setTimeout(() => {
     if (posts[id]) {
+      console.log(cb)
       cb(null, posts[id])
     } else {
       cb(new Error('Post not found.'))

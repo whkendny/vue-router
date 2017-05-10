@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 
 const Home = { template: '<div>home</div>' }
 
-// In Webpack we can use special require syntax to signify a "split point"
+// In Webpack we can use special require syntax to signify a "split point（分割点）"
 // Webpack will automatically split and lazy-load the split modules.
 // - https://webpack.js.org/guides/code-splitting-require/
 
@@ -30,10 +30,11 @@ const Foo = () => import('./Foo.vue')
 // const Foo = resolve => require(['./Foo.vue'], resolve)
 
 // If you want to group a number of components that belong to the same
-// nested route in the same async chunk, you will need to use
+// nested route in the same async chunk（同步数据块）, you will need to use
 // require.ensure. The 3rd argument is the chunk name they belong to -
 // modules that belong to the same chunk should use the same chunk name.
 // For more details see https://webpack.js.org/guides/code-splitting-require/
+//将路由对应的组件定义成异步分块组件
 const Bar = resolve => require.ensure([], () => resolve(require('./Bar.vue')), '/bar')
 const Baz = resolve => require.ensure([], () => resolve(require('./Baz.vue')), '/bar')
 

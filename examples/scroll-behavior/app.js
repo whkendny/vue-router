@@ -20,6 +20,7 @@ const Bar = {
 // - defaults to no scroll behavior
 // - return false to prevent scroll
 const scrollBehavior = (to, from, savedPosition) => {
+  console.log(savedPosition)
   if (savedPosition) {
     // savedPosition is only available for popstate navigations.
     return savedPosition
@@ -27,6 +28,7 @@ const scrollBehavior = (to, from, savedPosition) => {
     const position = {}
     // new navigation.
     // scroll to anchor by returning the selector
+    console.log(to.hash)
     if (to.hash) {
       position.selector = to.hash
     }

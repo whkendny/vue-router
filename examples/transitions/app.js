@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+/*
+* 定义路由模板
+* */
 const Home = {
   template: `
     <div class="home">
@@ -34,10 +37,18 @@ const Parent = {
   `
 }
 
+/*
+*  模板
+* */
 const Default = { template: '<div class="default">default</div>' }
 const Foo = { template: '<div class="foo">foo</div>' }
 const Bar = { template: '<div class="bar">bar</div>' }
 
+/*
+* HTML5 History模式
+* mode： 定义模式
+* base: 路由的路径
+* */
 const router = new VueRouter({
   mode: 'history',
   base: __dirname,
